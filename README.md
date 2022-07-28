@@ -81,12 +81,16 @@
 
 <div>
     <h1>백준 카드</h1>
-    테스트<br>
-    <img align='center' src="http://mazassumnida.wtf/api/v2/generate_badge?boj=fpdhslr7">
-    <br><br>
-    테스트<br>
-    <img align='center' src="http://mazassumnida.wtf/api/v2/generate_badge?boj=yms737">
-    <br><br>
-    테스트<br>
-    <img align='center' src="http://mazassumnida.wtf/api/v2/generate_badge?boj=meanwo0603">
+    <p>
+        이문삼<br>
+        <img align='center' src="http://mazassumnida.wtf/api/v2/generate_badge?boj=fpdhslr7">
+    </p>
+    <p>
+        테스트<br>
+        <img align='center' src="http://mazassumnida.wtf/api/v2/generate_badge?boj=yms737">
+    </p>
+    <p>
+        테스트<br>
+        <img align='center' src="http://mazassumnida.wtf/api/v2/generate_badge?boj=meanwo0603">
+    </p>
 </div>
