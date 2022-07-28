@@ -17,9 +17,9 @@
         <a href='#'>박훈용</a>
     </p>
     <p>
-        <img src="http://mazassumnida.wtf/api/mini/generate_badge?boj=fpdhslr7">
-        <br>
         <a href='https://github.com/moonthree'>이문삼</a>
+        <br>
+        <img align='center' src="http://mazassumnida.wtf/api/v2/generate_badge?boj=fpdhslr7">
     </p>
     <p>
         <img src="http://mazassumnida.wtf/api/mini/generate_badge?boj=fpdhslr7">
