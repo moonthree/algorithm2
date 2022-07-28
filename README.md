@@ -2,19 +2,19 @@
 <div align=left>
     <h1>📚 참여자</h1>
     <p>
-        <img src="http://mazassumnida.wtf/api/mini/generate_badge?boj=fpdhslr7">
-        <br>
         <a href='#'>양동민</a>
+        <br>
+        <img align='center' src="http://mazassumnida.wtf/api/v2/generate_badge?boj=fpdhslr7">
     </p>
     <p>
-        <img src="http://mazassumnida.wtf/api/mini/generate_badge?boj=fpdhslr7">
-        <br>
         <a href='#'>김지애</a>
+        <br>
+        <img align='center' src="http://mazassumnida.wtf/api/v2/generate_badge?boj=fpdhslr7">
     </p>
     <p>
-        <img src="http://mazassumnida.wtf/api/mini/generate_badge?boj=fpdhslr7">
-        <br>
         <a href='#'>박훈용</a>
+        <br>
+        <img align='center' src="http://mazassumnida.wtf/api/v2/generate_badge?boj=fpdhslr7">
     </p>
     <p>
         <a href='https://github.com/moonthree'>이문삼</a>
@@ -22,14 +22,14 @@
         <img align='center' src="http://mazassumnida.wtf/api/v2/generate_badge?boj=fpdhslr7">
     </p>
     <p>
-        <img src="http://mazassumnida.wtf/api/mini/generate_badge?boj=fpdhslr7">
-        <br>
         <a href='#'>임양원</a>
+        <br>
+        <img align='center' src="http://mazassumnida.wtf/api/v2/generate_badge?boj=fpdhslr7">
     </p>
     <p>
-        <img src="http://mazassumnida.wtf/api/mini/generate_badge?boj=fpdhslr7">
-        <br>
         <a href='#'>정혜수</a>
+        <br>
+        <img align='center' src="http://mazassumnida.wtf/api/v2/generate_badge?boj=fpdhslr7">
     </p>
     
 </div>
@@ -77,22 +77,3 @@
 [백준 단계별로 풀어보기](https://www.acmicpc.net/step) <br/>
 [프로그래머스](https://programmers.co.kr/) <br/>
 [swexpertacademy](https://swexpertacademy.com/main/main.do) <br/>
-
-<div>
-    <h1>백준 카드</h1>
-    <p>
-        이문삼
-        <br>
-        <img align='center' src="http://mazassumnida.wtf/api/v2/generate_badge?boj=fpdhslr7">
-    </p>
-    <p>
-        테스트
-        <br>
-        <img align='center' src="http://mazassumnida.wtf/api/v2/generate_badge?boj=yms737">
-    </p>
-    <p>
-        테스트
-        <br>
-        <img align='center' src="http://mazassumnida.wtf/api/v2/generate_badge?boj=meanwo0603">
-    </p>
-</div>
