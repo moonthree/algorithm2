@@ -2,14 +2,37 @@
 
 <div align=left>
     <h1>📚 참여자</h1>
-    <h3>
+    <p>
         <img src="http://mazassumnida.wtf/api/mini/generate_badge?boj=fpdhslr7">
         <br>
-        <a href='https://github.com/fpdhslr7'>이문삼</a>
-        
-        <br>
         <a href='#'>양동민</a>
-    </h3>
+    </p>
+    <p>
+        <img src="http://mazassumnida.wtf/api/mini/generate_badge?boj=fpdhslr7">
+        <br>
+        <a href='#'>김지애</a>
+    </p>
+    <p>
+        <img src="http://mazassumnida.wtf/api/mini/generate_badge?boj=fpdhslr7">
+        <br>
+        <a href='#'>박훈용</a>
+    </p>
+    <p>
+        <img src="http://mazassumnida.wtf/api/mini/generate_badge?boj=fpdhslr7">
+        <br>
+        <a href='https://github.com/moonthree'>이문삼</a>
+    </p>
+    <p>
+        <img src="http://mazassumnida.wtf/api/mini/generate_badge?boj=fpdhslr7">
+        <br>
+        <a href='#'>임양원</a>
+    </p>
+    <p>
+        <img src="http://mazassumnida.wtf/api/mini/generate_badge?boj=fpdhslr7">
+        <br>
+        <a href='#'>정혜수</a>
+    </p>
+    
 </div>
 
 ## 📚 스터디 방식
@@ -58,11 +81,12 @@
 
 <div>
     <h1>백준 카드</h1>
-    이문삼<br>
+    테스트<br>
     <img align='center' src="http://mazassumnida.wtf/api/v2/generate_badge?boj=fpdhslr7">
     <br><br>
-    윤민수<br>
+    테스트<br>
     <img align='center' src="http://mazassumnida.wtf/api/v2/generate_badge?boj=yms737">
     <br><br>
+    테스트<br>
     <img align='center' src="http://mazassumnida.wtf/api/v2/generate_badge?boj=meanwo0603">
 </div>
