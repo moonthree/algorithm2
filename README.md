@@ -22,7 +22,7 @@
         <img align='center' src="http://mazassumnida.wtf/api/v2/generate_badge?boj=fpdhslr7">
     </p>
     <p>
-        <a href='#'>임양원</a>
+        <a href='https://github.com/LymW328'>임양원</a>
         <br>
         <img align='center' src="http://mazassumnida.wtf/api/v2/generate_badge?boj=fpdhslr7">
     </p>
