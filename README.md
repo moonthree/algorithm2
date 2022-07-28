@@ -26,4 +26,5 @@
 <div>
     <img align='left' src="http://mazassumnida.wtf/api/v2/generate_badge?boj=fpdhslr7">
     <img align='left' src="http://mazassumnida.wtf/api/v2/generate_badge?boj=yms737">
+    <img align='left' src="http://mazassumnida.wtf/api/v2/generate_badge?boj=meanwo0603">
 </div>
