@@ -4,7 +4,7 @@
     <p>
         <a href='#'>양동민</a>
         <br>
-        <img align='center' src="http://mazassumnida.wtf/api/v2/generate_badge?boj=fpdhslr7">
+        <img align='center' src="http://mazassumnida.wtf/api/v2/generate_badge?boj=cococo6122">
     </p>
     <p>
         <a href='#'>김지애</a>
