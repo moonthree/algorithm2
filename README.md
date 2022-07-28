@@ -2,7 +2,26 @@
 
 <div align=left>
     <h1>📚 참여자</h1>
-    이문삼 <img align='left' src="http://mazassumnida.wtf/api/mini/generate_badge?boj=fpdhslr7">
+    <h3>
+        <img src="http://mazassumnida.wtf/api/mini/generate_badge?boj=fpdhslr7">
+        <br>
+        [이문삼](https://github.com/fpdhslr7)
+    </h3>
+    <h3>양동민</h3>
+</div>
+<div align=left>
+    <h1>📚 스터디 방식</h1>
+    - 기간: 22.07.25 ~ 22.12.31
+    - 시간
+        - 평일: `20:30 ~ 22:30`
+        - 주말: `15:00 ~ 18:00` (발표세미나 토요일 15시)
+    - 규정
+        - 평일 자율 참석
+        - 주말 참석 필수
+    - 방식
+        1. 매주 백준 단계별로풀어보기 <u>**2-3단계**</u>씩 풀기
+        2. 필수 문제는 각 단계별 <u>**3문제**</u>
+        3. 주말에 각자 푼 문제 공유 (디스코드 스터디 채널)
 </div>
 <div align=center>
     <h3>:baby_chick: used as the main</h3>
@@ -25,6 +44,8 @@
 
 <div>
     <img align='center' src="http://mazassumnida.wtf/api/v2/generate_badge?boj=fpdhslr7">
+    <br>
     <img align='center' src="http://mazassumnida.wtf/api/v2/generate_badge?boj=yms737">
+    <br>
     <img align='center' src="http://mazassumnida.wtf/api/v2/generate_badge?boj=meanwo0603">
 </div>
