@@ -2,7 +2,7 @@
 <div align=left>
     <h1>📚 참여자</h1>
     <p>
-        <a href='#'>양동민</a>
+        <a href='https://github.com/yangDM9378'>양동민</a>
         <br>
         <img align='center' src="http://mazassumnida.wtf/api/v2/generate_badge?boj=cococo6122">
     </p>
