@@ -2,7 +2,7 @@
 
 <div align=left>
     <h1>📚 참여자</h1>
-    <img align='left' src="http://mazassumnida.wtf/api/v2/generate_badge?boj=fpdhslr7">
+    이문삼 <img align='left' src="http://mazassumnida.wtf/api/mini/generate_badge?boj=fpdhslr7">
 </div>
 <div align=center>
     <h3>:baby_chick: used as the main</h3>
@@ -21,4 +21,8 @@
     <img src="https://img.shields.io/badge/oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white">
     <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">
     <img src="https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white">
+</div>
+
+<div>
+    <img align='left' src="http://mazassumnida.wtf/api/v2/generate_badge?boj=fpdhslr7">
 </div>
