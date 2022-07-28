@@ -1,5 +1,4 @@
 ![header](https://capsule-render.vercel.app/api?type=waving&color=auto&height=300&section=header&text=브론즈에서%20플레까지!&desc=%20📚(SSAFY%208기%20알고리즘%20스터디)📚&fontSize=49)
-
 <div align=left>
     <h1>📚 참여자</h1>
     <p>
