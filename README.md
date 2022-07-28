@@ -4,10 +4,12 @@
     <h1>📚 참여자</h1>
     <h3>
         <img src="http://mazassumnida.wtf/api/mini/generate_badge?boj=fpdhslr7">
-        <br/>
+        <br>
         <a href='https://github.com/fpdhslr7'>이문삼</a>
+        
+        <br>
+        <a href='#'>양동민</a>
     </h3>
-    <h3>양동민</h3>
 </div>
 
 ## 📚 스터디 방식
@@ -55,9 +57,11 @@
 [swexpertacademy](https://swexpertacademy.com/main/main.do) <br/>
 
 <div>
-    <h1>티어 리스트</h1>
+    <h1>백준 카드</h1>
+    이문삼<br>
     <img align='center' src="http://mazassumnida.wtf/api/v2/generate_badge?boj=fpdhslr7">
     <br><br>
+    윤민수<br>
     <img align='center' src="http://mazassumnida.wtf/api/v2/generate_badge?boj=yms737">
     <br><br>
     <img align='center' src="http://mazassumnida.wtf/api/v2/generate_badge?boj=meanwo0603">
