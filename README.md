@@ -2,7 +2,7 @@
 
 <div align=left>
     <h1>📚 참여자</h1>
-    <img align='right' src="http://mazassumnida.wtf/api/v2/generate_badge?boj=fpdhslr7">
+    <img align='left' src="http://mazassumnida.wtf/api/v2/generate_badge?boj=fpdhslr7">
 </div>
 <div align=center>
     <h3>:baby_chick: used as the main</h3>
