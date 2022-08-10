@@ -1,7 +1,5 @@
 words = input()
-
 ghost = 'GHOST'
-
 flag = 0
 
 def isPattern(idx):
@@ -15,7 +13,7 @@ for i in range(len(words)):
     if result == 1:
         flag = 1
         break
-
+        
 if flag:
     print('존재')
 else:
