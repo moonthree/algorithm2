@@ -1,37 +1,54 @@
-arr = [[0, 0, 0, 0, 0, 0, 0],
-       [0, 0, 1, 0, 1, 0, 0],
-       [0, 1, 2, 0, 2, 1, 0],
-       [0, 0, 1, 2, 1, 0, 0],
-       [0, 0, 2, 1, 0, 1, 0],
-       [0, 1, 1, 0, 0, 0, 0],
-       [0, 0, 0, 0, 0, 0, 0]
+arr = [['_', '_', '_'],
+       ['_', '_', '_'],
+       ['A', 'T', 'K'],
+       ['_', '_', '_'],
+       ['_', '_', '_']
        ]
 
-a, b = map(int, input().split())
+arr2 = [['_']*3 for _ in range(5)]
 
-# 00 01 02
-# 10 11 12
-# 20 21 22
+ay, ax = 2, 0
+ty, tx = 2, 1
+ky, kx = 2, 2
 
-directy = [-1, 0, 1, 0]
-directx = [0, 1, 0, -1]
+for _ in range(7):
+    a, b = input().split()
 
-def catch(y, x):
-    arr[y][x] = 1
-    cnt = 0
-    for i in range(len(arr)):
-        for j in range(len(arr[i])):
-            if arr[i][j] == 2:
-                white = 0
-                for k in range(4):
-                    dy = directy[k] + i
-                    dx = directx[k] + j
-                    if dy < 0 or dx < 0 or dy > 6 or dx > 6:
-                        continue
-                    if arr[dy][dx] == 1:
-                        white += 1
-                if white == 4:
-                    cnt += 1
-    return cnt
+    if a == 'A':
+        if b == 'UP':
+            ay -= 1
+        elif b == 'DOWN':
+            ay += 1
+        elif b == 'RIGHT':
+            ax += 1
+        elif b == 'LEFT':
+            ax -= 1
 
-print(catch(a, b))
+    if a == 'T':
+        if b == 'UP':
+            ty -= 1
+        elif b == 'DOWN':
+            ty += 1
+        elif b == 'RIGHT':
+            tx += 1
+        elif b == 'LEFT':
+            tx -= 1
+
+    if a == 'K':
+        if b == 'UP':
+            ky -= 1
+        elif b == 'DOWN':
+            ky += 1
+        elif b == 'RIGHT':
+            kx += 1
+        elif b == 'LEFT':
+            kx -= 1
+
+arr2[ay][ax] = 'A'
+arr2[ty][tx] = 'T'
+arr2[ky][kx] = 'K'
+
+for y in range(len(arr2)):
+    for x in range(len(arr2[y])):
+        print(arr2[y][x], end='')
+    print()
