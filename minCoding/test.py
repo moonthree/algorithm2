@@ -1,25 +1,28 @@
-# arr = [['A', 7, 9, 'T', 'K', 'Q'], ['M', 'I', 'N', 'C', 'O', 'D']]
-#
-# letter = input().split()
-#
-# for i in arr:
-#     for j in i:
-#         for x in letter:
-#             if j in letter:
-#                 print(f'{x} : 존재')
-#             else:
-#                 print(f'{x} : 없음')
+# 입력
+n = int(input())
+s = input()
+s(5,5)
 
-rule = input().split()
+#함수를 만든다
+global x
+global y
+def up(x,y):
+    y = y-1
+    return
 
-rule[0] = int(rule[0])
-rule[1] = int(rule[1])
+def down(x,y):
+    y = y+1
+    return
 
-# # rule[0] = 열
-# # rule[1] = 행
-# # rule[2] = 값
+def left(x,y):
+    x = x-1
+    return
 
-arr = [rule[2]*rule[1] for i in range(rule[0])]
+def right(x,y):
+    x = x+1
+    return
 
-for i in arr:
-    print(i)
+def click(x,y):
+    return x,y
+
+click(5,5)
