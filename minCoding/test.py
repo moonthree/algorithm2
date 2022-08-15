@@ -1,28 +1,15 @@
-# 입력
-n = int(input())
-s = input()
-s(5,5)
+lst = [5,5]
+n= int(input())
 
-#함수를 만든다
-global x
-global y
-def up(x,y):
-    y = y-1
-    return
-
-def down(x,y):
-    y = y+1
-    return
-
-def left(x,y):
-    x = x-1
-    return
-
-def right(x,y):
-    x = x+1
-    return
-
-def click(x,y):
-    return x,y
-
-click(5,5)
+for _ in range(n):
+    s= input()
+    if s == 'up':
+        lst[0] += 1
+    elif s == 'down':
+        lst[0] -= 1
+    elif s == 'left':
+        lst[1] -= 1
+    elif s == 'right':
+        lst[1] += 1
+    elif s == 'click':
+        print(lst)
