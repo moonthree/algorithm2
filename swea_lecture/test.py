@@ -1,5 +1,5 @@
-a = 'TLMMHOOOHMMLT'
-m=13
-print(a[:m//2])
+a = 'abcde'
+b = a[:3]
+print(b)
 
-print(a[m:m // 2 :-1])
+print(a[::-1])
