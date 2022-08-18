@@ -8,7 +8,8 @@ for tc in range(1, t + 1):
 
     arr = [input() for _ in range(n)]
     arr_new = []
-    
+    if tc==1:
+        d=1
     # 가로 arr_new에 추가
     for i in range(n):
         for j in range(n - m + 1):
@@ -24,12 +25,16 @@ for tc in range(1, t + 1):
             arr_new.append(result[k:m + k])
 
     # 짝수면
+    a = 0
     if m % 2 == 0:
         for i in range(len(arr_new)):
             if arr_new[i][:m//2] == arr_new[i][m: m//2-1: -1]:
-                print(f'#{tc} {arr_new[i]}')
+                a = i
+                # print(f'#{tc} {arr_new[i]}')
     # 홀수면
     else:
         for i in range(len(arr_new)):
             if arr_new[i][:m//2] == arr_new[i][m:m//2:-1]:
-                print(f'#{tc} {arr_new[i]}')
+                a = i
+                # print(f'#{tc} {arr_new[i]}')
+    print(f'#{tc} {arr_new[a]}')
