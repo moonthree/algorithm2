@@ -17,7 +17,7 @@ def dfs(now, level):
         if level < short:
             short = level
 
-    for i in range(b-1):
+    for i in range(6):
         if arr[now][i] == 1 and used[i] == 0:
             used[i] = 1
             dfs(i, level+1)
@@ -26,5 +26,8 @@ def dfs(now, level):
 
 used[a-1] = 1
 dfs(a-1, 0)
-print(short)
+if short == int(21e8):
+    print(0)
+else:
+    print(short)
 
