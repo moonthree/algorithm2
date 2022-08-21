@@ -1,18 +1,14 @@
-a = int(input())
-b = input()
+arr = [[0, 1, 0, 0, 0],
+       [0, 1, 0, 0, 0],
+       [0, 1, 1, 1, 0],
+       [0, 0, 0, 0, 0], ]
 
-def chicken(num):
-    return num + 10
-
-def coke(str):
-    return str
-
-def kfc(num, str):
-    c = chicken(num)
-    d = coke(str)
-    print(f'{c}{d}')
-
-def main(a, b):
-    kfc(a, b)
-
-main(a, b)
+flag = True
+for y in range(4):
+    for x in range(5):
+        if arr[3 - y][4 - x] == 1:
+            print(f'({3 - y},{4 - x})')
+            flag = False
+            break
+    if flag == False:
+        break
