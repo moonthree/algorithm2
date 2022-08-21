@@ -28,3 +28,4 @@ for y in range(n):
             cnt += 1
 
 print(cnt)
+
