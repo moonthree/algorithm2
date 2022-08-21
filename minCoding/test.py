@@ -1,15 +1,11 @@
-lst = [5,5]
-n= int(input())
+sen = list(input())
+t1, t2 = input().split()
 
-for _ in range(n):
-    s= input()
-    if s == 'up':
-        lst[0] += 1
-    elif s == 'down':
-        lst[0] -= 1
-    elif s == 'left':
-        lst[1] -= 1
-    elif s == 'right':
-        lst[1] += 1
-    elif s == 'click':
-        print(lst)
+for i in range(len(sen)): #5일때 0,1,2,3,4
+    if t1 or t2 == sen[i]:
+        if i-1 < 0 or i+1 > 4:
+            continue
+        sen[i - 1] = '#'
+        sen[i + 1] = '#'
+
+print(sen)
