@@ -2,12 +2,13 @@ def dfs(start_node):
     stack = [start_node]
     used = []
     ssum = 0
-    a = [0]
+    ssum_arr = [0]
 
     while stack:
         node = stack.pop()
-        node2 = a.pop()
+        node2 = ssum_arr.pop()
         if node not in used:
+
             used.append(node)
             print(node, end=' ')
             ssum += node2
@@ -15,10 +16,7 @@ def dfs(start_node):
             for i in range(len(arr[node])-1, -1, -1):
                 if arr[node][i] != 0:
                     stack.append(i)
-                    a.append(arr[node][i])
-                    # a.append(i)
-                    # print(a)
-
+                    ssum_arr.append(arr[node][i])
 
 
 arr = [

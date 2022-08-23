@@ -1,11 +1,21 @@
-sen = list(input())
-t1, t2 = input().split()
+arr = ['a', 'b', 'c', 'd']
+path = [''] * 3
 
-for i in range(len(sen)): #5일때 0,1,2,3,4
-    if t1 or t2 == sen[i]:
-        if i-1 < 0 or i+1 > 4:
-            continue
-        sen[i - 1] = '#'
-        sen[i + 1] = '#'
 
-print(sen)
+def abc(level):
+    if level == 3:
+        for i in range(3):
+            print(path[i], end='')
+        print()
+        return
+
+    for i in range(4):
+        # 1 path[level-1] -> 그전 단계에서 타고 들어온 곳
+        # 2 arr[i] -> 앞으로 들어갈 가지
+        # 3 그전 들어온 가지 < 앞으로 들어갈 가지  (True)
+        if level > 0 and path[level - 1] >= arr[i]: continue
+        path[level] = arr[i]
+        abc(level + 1)
+
+
+abc(0)
