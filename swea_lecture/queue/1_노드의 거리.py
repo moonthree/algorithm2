@@ -1,31 +1,35 @@
-def bfs(v):  # 노드1
-    q = []  # 노드 번호만 넣는 큐
-    q.append(v)  # 노드1
-    visited[v] = True
-    while q:  # 큐가 빌 때까지
-        v = q.pop(0)  # 앞부터 pop
-        for i in range(E):  # 방향성 없기 때문, 노드 앞 뒤 다 검사하자
-            if node_to_node[i][0] == v and visited[node_to_node[i][1]] == False:  # 앞
-                val = node_to_node[i][1]
-                q.append(val)  # 앞 맞으면 뒤노드를 큐 넣기
-                distance[val] = distance[v] + 1  # 연결노드 다음이므로 +1
-                visited[val] = True
+def bfs(st):
+    node = [st]  # 노드 번호 넣는 큐, 시작점 넣고 시작
+    visited[st] = 1  # 방문한 노드 체크
 
-            if node_to_node[i][1] == v and visited[node_to_node[i][0]] == False:  # 뒤
-                val = node_to_node[i][0]
-                q.append(val)  # 뒤 맞으면 앞노드를 큐 넣기
-                distance[val] = distance[v] + 1
-                visited[val] = True
+    while node:  # 큐에 노드가 있는동안
+        now = node.pop()  # 맨 앞 꺼냄
+        for i in range(e):
+            if arr[i][0] == now and visited[arr[i][1]] == 0:  # 현재 위치를 찾고, 방문할 곳에 방문한 적이 없으면
+                move = arr[i][1]  # 해당 노드로 가겠음
+                node.append(move)  # 감, 큐에 방문한 노드 저장
+                distance[move] = distance[now] + 1  # 움직인 거리 +1
+                visited[move] = 1  # 방문 확인
+            if arr[i][1] == now and visited[arr[i][0]] == 0:
+                move = arr[i][0]
+                node.append(move)
+                distance[move] = distance[now] + 1
+                visited[move] = 1
 
 
-for testCase in range(1, 1 + int(input())):
-    V, E = map(int, input().split())
-    node_to_node = [list(map(int, input().split())) for _ in range(E)]
-    # print(node_to_node) # [[1, 4], [1, 3], [2, 3], [2, 5], [4, 6]]
-    start, end = map(int, input().split())  # 노드1 => 노드6
+t = int(input())
 
-    visited = [False] * (V + 1)  # 번호별 방문
-    distance = [0] * (V + 1)  # 번호별 도달거리
-    bfs(start)  # 시작점부터 출발 # 노드1부터 시작
+for tc in range(1, t + 1):
+    v, e = map(int, input().split())
+    arr = [list(map(int, input().split())) for _ in range(e)]
+    s, g = map(int, input().split())
 
-    print(f"#{testCase}", distance[end])  # 도착점의 도달거리
+    visited = [0] * (v+1)
+    distance = [0] * (v+1)
+
+    bfs(s)
+
+    if distance[g] == 0:
+        print(f'#{tc} 0')
+    else:
+        print(f'#{tc} {distance[g]}')
