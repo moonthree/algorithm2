@@ -14,5 +14,3 @@ for i in range(len(bucket)):
     if maxi == bucket[i]:
         print(chr(i))
         break
-
-
