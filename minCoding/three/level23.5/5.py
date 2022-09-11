@@ -2,11 +2,17 @@ arr = list(map(int, input().split()))
 
 pivot = arr[0]
 
+a = 0
+a_idx = 0
+b = 0
+b_idx = 0
+
+n = 0
+while n < 3:
+    print(n)
+    n += 1
+
 while True:
-    a = 0
-    a_idx = 0
-    b = 0
-    b_idx = 0
 
     for i in range(1, len(arr)):
         if arr[i] > pivot:
