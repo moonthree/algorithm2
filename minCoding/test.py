@@ -1,13 +1,20 @@
-arr = [1, 3, 3, 3, 1, 1, 3]
-n = len(arr)
-arr1 = arr[0:(1+n)//2]
-arr2 = arr[(1+n)//2: n]
+arr = [list(input()) for _ in range(4)]
 
-print(arr1)
-print(arr2)
+# asdqwd
+for i in range(3, -1 , -1):
+    for j in range(2, -1, -1):
+        if arr[i][j] != '_':
+            cnt = 0
+            for k in range(3, i, -1):
+                while arr[k-cnt][j] != '_':
+                    cnt += 1
+                arr[k-cnt][j]= arr[i][j]
+                arr[i][j]= '_'
+                break
 
-# 1 3 3 3 1 1 3
-# 1 3 3 3 // 1 1 3
-# 1 3 // 1 3
-# 1 1
-# 1
+
+
+for s in range(4):
+    for t in range(3):
+        print(arr[s][t], end='')
+    print()
