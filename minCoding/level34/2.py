@@ -1,9 +1,6 @@
 def bs(array, st, ed):
     mid = (st + ed) // 2
-    if mid == 9:
-        if array[mid] == '#':
-            return mid
-    if array[mid] == '#' and array[mid+1] == '_':
+    if st > ed:
         return mid
     elif array[mid] == '_':
         return bs(array, st, mid - 1)

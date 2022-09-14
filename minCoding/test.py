@@ -1,20 +1,12 @@
-arr = [list(input()) for _ in range(4)]
-
-# asdqwd
-for i in range(3, -1 , -1):
-    for j in range(2, -1, -1):
-        if arr[i][j] != '_':
-            cnt = 0
-            for k in range(3, i, -1):
-                while arr[k-cnt][j] != '_':
-                    cnt += 1
-                arr[k-cnt][j]= arr[i][j]
-                arr[i][j]= '_'
-                break
-
-
-
-for s in range(4):
-    for t in range(3):
-        print(arr[s][t], end='')
-    print()
+import random
+def r(n):
+  global c,v
+  c+=1
+  v[n]=1,print(n)
+  if c==7:return
+  while 1:
+      p=random.randrange(1,46)
+      if v[p]!=1:break
+  r(p)
+c,v=0,[0]*47
+r(random.randrange(1,46))
