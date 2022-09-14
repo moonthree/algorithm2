@@ -16,11 +16,11 @@ for tc in range(1, t + 1):
     cnt = 0
 
     for i in range(e):
-        p, c = arr[i * 2], arr[i * 2 + 1]
-        if left_son[p] == 0:
-            left_son[p] = c
+        parent, child = arr[i * 2], arr[i * 2 + 1]
+        if left_son[parent] == 0:
+            left_son[parent] = child
         else:
-            right_son[p] = c
+            right_son[parent] = child
 
     post(n)
     print(f'#{tc} {cnt}')

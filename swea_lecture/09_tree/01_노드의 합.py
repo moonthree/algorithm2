@@ -7,7 +7,6 @@ for tc in range(1, t+1):
     n, m, l = map(int, input().split())
 
     tree = [0] * (n+1)
-    print(tree)
     # m개에 걸쳐 리프노드 번호와 1000이하의 자연수가 주어지니까 tree배열에 넣음
     for i in range(m):
         idx, val = map(int, input().split())
@@ -21,7 +20,7 @@ for tc in range(1, t+1):
         if now > 1:
             tree[now//2] += tree[now]
     post(1)
-
+    print(tree)
     print(f'#{tc} {tree[l]}')
 
 # ex)
