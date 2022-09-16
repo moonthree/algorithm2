@@ -1,10 +1,10 @@
 # 순열
 dice = [1, 2, 3, 4, 5, 6]
 
-depth = 3
-branch = 6
+depth = 3           # 몇 자리까지 나열할지
+branch = 6          # 주사위니까 6
 path = [0]*depth
-used = [0]*branch
+used = [0]*branch   # 순열은 중복없이 선택하므로 used 사용
 
 def abc(level):
     if level == depth:

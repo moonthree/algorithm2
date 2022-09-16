@@ -2,16 +2,18 @@ n, m = map(int, input().split())
 arr = list(map(int, input().split()))
 
 Min = 21e8
-path = [0]*m
-used = [0]*n
-arr2 = []
+path = [0] * m
+used = [0] * n
+result = []
+
+
 def dfs(level, total):
-    global path, used, Min, arr2
+    global path, used, Min, result
     if level == m:
         if total < Min:
             Min = total
-            arr2 = path
-            print(path)
+            for i in range(level):
+                result = path[:]
         return
 
     for i in range(n):
@@ -19,10 +21,10 @@ def dfs(level, total):
             continue
         used[i] = 1
         path[level] = arr[i]
-        dfs(level+1, total * arr[i])
+        dfs(level + 1, total * arr[i])
         used[i] = 0
 
 
 dfs(0, 1)
-print(Min)
-print(arr2)
+result.sort()
+print(*result)
