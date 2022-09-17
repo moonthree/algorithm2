@@ -1,14 +1,14 @@
 def abc(level):
-    #print('#', end='')
+    #print(level, end='')
     if level==2:
         #print('#', end='')
         return
     #print('#', end='')
     for i in range(2):
-        #print('#', end='')
+        #print(level, end='')
         abc(level+1)
-        #print('#', end='')
-    #print('#', end='')
+        # print(level, end='')
+    #print(level, end='')
 
 
 abc(0)
