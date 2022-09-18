@@ -6,16 +6,15 @@ def dice(i):
     for j in range(1, n-1):
         arr[i][j], arr[i][j + 1] = arr[i][j + 1], arr[i][j]
     arr[i][0], arr[i][n - 1] = arr[i][n - 1], arr[i][0]
-    print(*arr)
 
 Max = -21e8
 def dfs(level):
     global arr, Max
-    if level == n:
+    if level == n*2:
         ret = getSum()
         Max = max(Max, ret)
         return
-    for i in range(n-1):
+    for i in range(n):
         dice(i)
         dfs(level+1)
 

@@ -13,13 +13,14 @@ def recur(level):
         return
 
     for i in range(len(arr)):
-        if used[i] == 1 or arr[i] == word:
-            continue
-        used[i] = 1
-        path.append(arr[i])
-        recur(level+1)
-        path.pop()
-        used[i] = 0
+        # if used[i] == 1 or arr[i] == word:
+        #     continue
+        if used[i] == 0 and arr[i] != word:
+            used[i] = 1
+            path.append(arr[i])
+            recur(level+1)
+            path.pop()
+            used[i] = 0
 
 recur(0)
 
