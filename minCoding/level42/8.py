@@ -9,15 +9,12 @@ directx = [0, 0, -1, 1]
 flag = 0
 def dfs(level, y, x):
     global arr, flag
-    #backup = copy.deepcopy(arr)
     if y == n - 1 and x == n - 1:
         flag = 1
         return
     if level > n*n:
         return
-    #print(level)
     miro(level, y, x)
-    #arr = copy.deepcopy(backup)
 
 def miro(level, a, b):
     global arr

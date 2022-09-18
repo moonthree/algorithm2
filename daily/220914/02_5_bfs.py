@@ -11,6 +11,7 @@ for _ in range(2):
 
 while q:
     now = q.popleft()
+    print(q)
     y, x = now[0], now[1]
     directy = [-1, 1, 0, 0]
     directx = [0, 0, -1, 1]
