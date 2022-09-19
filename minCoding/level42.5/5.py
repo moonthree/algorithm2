@@ -1,46 +1,61 @@
-import random, copy
+import copy
+
+
+def dfs(now, z):
+    global cnt
+    global arr
+    global result
+    global Max
+
+    if z == n:
+        return
+    if now == 3:
+        for k in range(len(arr)):
+            arr[k] = arr[k] * 2
+        dfs(0, z + 1)
+        if Max < cnt:
+            Max = cnt
+        return
+
+    if now == 0:
+        for i in range(0, 3):
+            if i in used:
+                continue
+            arr_copy = copy.deepcopy(arr)
+            cnt += arr[i]
+            arr[i] = 0
+            dfs(now + 1, z)
+            arr = copy.deepcopy(arr_copy)
+            cnt -= arr[i]
+
+    elif now == 1:
+        for i in range(3, 6):
+            if i in used:
+                continue
+            arr_copy = copy.deepcopy(arr)
+            cnt += arr[i]
+            arr[i] = 0
+            dfs(now + 1, z)
+            arr = copy.deepcopy(arr_copy)
+            cnt -= arr[i]
+
+    elif now == 2:
+        for i in range(1, 5):
+            if i in used:
+                continue
+            arr_copy = copy.deepcopy(arr)
+            cnt += arr[i]
+            arr[i] = 0
+            dfs(now + 1, z)
+            arr = copy.deepcopy(arr_copy)
+            cnt -= arr[i]
+
 
 arr = list(map(int, input().split()))
 n = int(input())
-path = []
-def eagle1(i):
-    global arr
-    idx = i
-    if i > 2:
-        idx = random.randrange(0, 1)
-    b = arr[idx]
-    arr[idx] = 0
-    return b
-def eagle2(i):
-    global arr
-    idx = i
-    if i < 3:
-        idx = random.randrange(3, 5)
-    b = arr[idx]
-    arr[idx] = 0
-    return b
-def eagle3(i):
-    global arr
-    idx = i
-    if i > 4 or i < 1:
-        idx = random.randrange(1, 4)
-    b = arr[idx]
-    arr[idx] = 0
-    for j in range(len(arr)):
-        arr[j] = arr[j] * 2
-    return b
-
-def dfs(level, total):
-    global arr
-    temp = copy.deepcopy(arr)
-    if level == n:
-        print(path)
-        return
-
-    for i in range(6):
-        dfs(level + 1, (total + eagle1(i)))
-        dfs(level + 1, (total + eagle2(i)))
-        dfs(level + 1, (total + eagle3(i)))
-        arr = copy.deepcopy(temp)
-
-dfs(0,0)
+cnt = 0
+result = 0
+used = []
+Max = 0
+dfs(0, 0)
+print(Max)
