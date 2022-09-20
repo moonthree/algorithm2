@@ -2,12 +2,14 @@ import sys
 input = sys.stdin.readline
 
 def dfs(arr, v, used):
+    global path
     used[v] = True
 
     for i in range(len(arr[v])):
+        #path[i] = 0
         if arr[v][i] == 1 and not used[i]:
-            dfs(arr, i, used)
             path[i] = v
+            dfs(arr, i, used)
 
 
 n, m, v = map(int, input().split())
