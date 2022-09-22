@@ -1,31 +1,33 @@
-from collections import deque
-def bfs(sty, stx):
-    q = deque()
-    q.append([sty, stx, 0])
-    visited = [[False]*n for _ in range(n)]
-    visited[sty][stx] = True
-    directy = [-1, 1, 0, 0]
-    directx = [0, 0, -1, 1]
+def dfs(now):
+    global ssum
+    global Min
+    global li
+    if now == n - 1:
+        ssum = 0
+        for k in range(1, len(li)):
+            ssum += arr[li[k - 1]][li[k]]
+        ssum += arr[li[len(li) - 1]][0]
+        if Min > ssum:
+            Min = ssum
+        return
 
-    while q:
-        now = q.popleft()
-        nowy, nowx, total = now[0], now[1], now[2]
-        print(nowy, nowx, total)
-        if nowy == n-1 and nowx == n-1:
-            print(total)
+    for i in range(1, n):
+        if used[i] == 1: continue
+        li.append(i)
+        used[i] = 1
+        dfs(now + 1)
+        used[i] = 0
+        li.pop()
 
-        for i in range(4):
-            dy = directy[i] + nowy
-            dx = directx[i] + nowx
-            if dy < 0 or dx < 0 or dy > n-1 or dx > n-1:
-                continue
-            if visited[dy][dx]:
-                continue
-            visited[dy][dx] = True
-            q.append([dy, dx, total+arr[dy][dx]])
 
-t = int(input())
-for tc in range(1, t+1):
+T = int(input())
+for t in range(T):
     n = int(input())
-    arr = [list(map(int, input())) for _ in range(n)]
-    bfs(0, 0)
+    li = []
+    li.append(0)
+    arr = [list(map(int, input().split())) for _ in range(n)]
+    used = [0] * n
+    ssum = 0
+    Min = 9999
+    dfs(0)
+    print(f'#{t + 1} {Min}')

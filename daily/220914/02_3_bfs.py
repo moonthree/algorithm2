@@ -9,7 +9,9 @@ q = deque()
 q.append([y, x])
 
 while q:
+    print(q)
     now = q.popleft()
+    print(now)
     y, x = now[0], now[1]
     directy = [-1, 1, 0, 0]
     directx = [0, 0, -1, 1]
@@ -22,5 +24,5 @@ while q:
                 arr[dy][dx] = arr[y][x] + 1
                 q.append([dy, dx])
 
-for i in arr:
-    print(*i)
+# for i in arr:
+#     print(*i)
