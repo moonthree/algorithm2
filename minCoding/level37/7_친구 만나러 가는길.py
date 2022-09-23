@@ -28,7 +28,7 @@ def bfs(sty, stx, level, cnt):
                 continue
             if visited[dy][dx] or arr[dy][dx] == 'x':
                 continue
-            visited[dy][dx] = 1
+            visited[dy][dx] = True
             q.append([dy, dx, level+1, cnt])
 
 y, x = map(int, input().split())

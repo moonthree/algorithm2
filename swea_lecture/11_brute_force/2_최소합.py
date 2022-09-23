@@ -2,7 +2,7 @@ t = int(input())
 
 for tc in range(1, t+1):
     n = int(input())
-    arr = [list(map(int, input())) for _ in range(n)]
+    arr = [list(map(int, input().split())) for _ in range(n)]
     arr1 = [[0] * n for _ in range(n)]
 
     for i in range(1, n):
