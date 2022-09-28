@@ -1,7 +1,5 @@
 def dfs(idx, cnt):
     global move
-
-    # 종점에 못 가면 중지
     if cnt >= move:
         return
     # 종점에 가거나 넘으면
