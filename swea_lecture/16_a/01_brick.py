@@ -1,38 +1,43 @@
+from collections import deque
+
 def police(level, y, x):
     global MAX
-    arr2 = [[0]*(n*2) for _ in range(n*2)]
-    arr2[y][x] = 1
-    if level == n:
+    if level == n+2:
         return
-    directy = [-1, 1, 0, 0]
-    directx = [0, 0, -1, 1]
-    sty, stx = y-level, x-level
-    for i in range(sty, sty+2*level+2):
-        for j in range(stx, stx+2*level+2):
-            arr2[i][j] = 1
+    q = deque()
+    q.append((level, 1, y, x))
+    service = [[0]*n for _ in range(n)]
+    service[y][x] = 1
+    directy = [-1, 1, 0, 0, 0]
+    directx = [0, 0, -1, 1, 0]
 
-
-    cost = level * level + (level-1)*(level-1)
+    while q:
+        level, expand, nowy, nowx = q.popleft()
+        if level == expand:
+            break
+        for i in range(4):
+            dy = directy[i] + nowy
+            dx = directx[i] + nowx
+            if dy < 0 or dx < 0 or dy > n-1 or dx > n-1:
+                continue
+            if service[dy][dx]:
+                continue
+            service[dy][dx] = 1
+            q.append((level, expand+1, dy, dx))
+    # for i in range(n):
+    #     for j in range(n):
+    #         print(visited[i][j], end=' ')
+    #     print()
     home = 0
-    t = 0
     for i in range(n):
         for j in range(n):
-            if arr[i][j] == 1 and arr2[i][j]:
+            if arr[i][j] == 1 and service[i][j] == 1:
                 home += 1
-            if arr2[i][j]:
-                t += 1
-    revenue = home * m
-    print(y, x, level, home, t)
-    if revenue - cost >= 0:
+    cost = level*level + (level-1)*(level-1)
+    if home*m >= cost:
         MAX = max(home, MAX)
-    # print(level)
-    for i in range(n):
-        for j in range(n):
-            print(arr2[i][j], end=' ')
-        print()
-    print()
-    #police(level+1, y, x)
 
+    police(level+1, y, x)
 
 t = int(input())
 
@@ -48,6 +53,5 @@ for tc in range(1, t+1):
     MAX = int(-21e8)
     for yy in range(n):
         for xx in range(n):
-            police(9, yy, xx)
-    police(9, 9, 9)
+            police(1, yy, xx)
     print(f'#{tc} {MAX}')

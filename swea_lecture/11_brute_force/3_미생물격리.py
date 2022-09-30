@@ -1,75 +1,98 @@
-# 1. 이동
-# 2. 미생물 위치
-# 3. 빨간줄이면 //2, 방향 반대로, 살아남은 미생물 수가 0이 되면 군집이 사라짐
-# 4. 만나면 합치고 큰 쪽으로
-# 5. 상 : 1 // 하 : 2 // 좌 : 3 // 우 : 4
-import copy
+def move(k):
+    global arr
+    for i in arr:
+        print(i)
+    print('aaaaaaaaaaaaaaaaaaaaaaa처음')
+    for i in range(len(arr)):
+        arr[i][0] += dy[arr[i][3]]
+        arr[i][1] += dx[arr[i][3]]
+    for i in arr:
+        print(i)
+    print('aaaaaaaaaaaaaaaaaaaaaaa위치 바꾸기')
+    mix(k)
+
+
+def mix(k):
+    global arr
+    used = [0]*len(arr)
+    arr2 = []
+    for i in range(len(arr)):
+        temp = []
+        if used[i]:
+            continue
+        for j in range(len(arr)):
+            if arr[i][0] == arr[j][0] and arr[i][1] == arr[j][1] and not used[j]:
+                used[j] = 1
+                temp.append([arr[j][0], arr[j][1], arr[j][2], arr[j][3]])
+        temp2 = sorted(temp, key=lambda x:-x[2])
+        #print(temp2)
+        for j in range(1, len(temp2)):
+            temp2[0][2] += temp2[j][2]
+        arr2.append(temp2[0])
+    arr = []
+    for i in arr2:
+        arr.append(i)
+    for i in arr:
+        print(i)
+    print('aaaaaaaaaaaaaaaaaaaaaaa 합치기')
+    red(k)
+
+
+def red(k):
+    global arr
+    for i in range(len(arr)):
+        if arr[i][0] == 0 or arr[i][1] == 0 or arr[i][0] == n or arr[i][1] == n:
+            arr[i][2] = arr[i][2] // 2
+            if arr[i][3] == 1 or arr[i][3] == 3:
+                arr[i][3] = arr[i][3] + 1
+            elif arr[i][3] == 2 or arr[i][3] == 4:
+                arr[i][3] = arr[i][3] - 1
+    for i in range(len(arr)):
+        if arr[i][2] == 0:
+            arr[i].pop()
+    for i in arr:
+        print(i)
+    print('aaaaaaaaaaaaaaaaaaaaaaa red존')
+    print()
+    #quit()
+
+
 t = int(input())
-for tc in range(1, t+1):
-    cell, time, microbe = map(int, input().split())
-    arr = [[0]*cell for _ in range(cell)]
-    
-    arr_microbe = []
-    for i in range(microbe):
-        y, x, num, direct = map(int, input().split())
-        arr_microbe.append([y, x, num, direct])
-    # print(arr_microbe[0][0])
-    # print(arr_microbe[0][1])
-    for _ in range(time):
-        # 1. 이동
-        for i in range(len(arr_microbe)):
-            y, x, num, direct = arr_microbe[i]
-            if direct == 1:
-                arr_microbe[i] = [y-1, x, num, direct]
-            elif direct == 2:
-                arr_microbe[i] = [y+1, x, num, direct]
-            elif direct == 3:
-                arr_microbe[i] = [y, x-1, num, direct]
-            elif direct == 4:
-                arr_microbe[i] = [y, x+1, num, direct]
-        #print(arr_microbe)
-        # 2. 빨간줄이면
-        for i in range(len(arr_microbe)):
-            y, x, num, direct = arr_microbe[i]
-            if y == 0 or x == 0:
-                # // 2
-                num = int(num / 2)
-                # 방향 바꾸기
-                if direct == 1 or direct == 3:
-                    direct += 1
-                elif direct == 2 or direct == 4:
-                    direct -= 1
-            arr_microbe[i] = [y, x, num, direct]
-        # 3. 위치 같으면 합치기
-        new_microbe = []
-        for i in range(len(arr_microbe)):
-            y, x, num, direct = arr_microbe[i]
-            new = [y, x, 0, 0]
-            if new not in new_microbe:
-                new_microbe.append([y, x, 0, 0])
-        arr_microbe.sort(key=lambda x: x[2])
-        for i in range(len(arr_microbe)):
-            y, x, num, direct = arr_microbe[i]
-            for j in range(len(new_microbe)):
-                ny, nx, nnum, ndirect = new_microbe[j]
-                if y == ny and x == nx:
-                    new_microbe[j] = [ny, nx, nnum+num, ndirect]
-            #temp.sort(key=lambda x: x[2])
+for tc in range(1, t + 1):
+    # 셀의 수, 격리 시간, 미생물 군집의 개수
+    n, m, k = map(int, input().split())
 
+    # 세로:0, 가로:1, 미생물수:2, 이동방향:3
+    arr = [list(map(int, input().split())) for _ in range(k)]
 
-        #print(new_microbe)
+    # 이동방향 (상:1, 하:2, 좌:3, 우:4)
+    dy = [0, -1, 1, 0, 0]
+    dx = [0, 0, 0, -1, 1]
 
-        # 4. 세력 없으면 삭제
-        #print(arr_microbe)
-        fin_microbe = []
-        for i in range(len(new_microbe)):
-            if new_microbe[i][2] != 0:
-                fin_microbe.append(new_microbe[i])
+    for _ in range(100):
+        move(k)
+    cnt = 0
+    for i in range(len(arr)):
+        #print(arr[i][2])
+        cnt += arr[i][2]
+    print(f'#{tc} {cnt}')
 
-        arr_microbe = fin_microbe
+# 1
+# 7 2 9
+# 1 1 7 1
+# 2 1 7 1
+# 5 1 5 4
+# 3 2 8 4
+# 4 3 14 1
+# 3 4 3 3
+# 1 5 8 2
+# 3 5 100 1
+# 5 5 1 1
 
-    #크기 출력
-    total = 0
-    for j in arr_microbe:
-        total += j[2]
-    print(f'#{tc} {total}')
+# 1
+# 7 1 5
+# 0 1 7 3
+# 0 5 7 4
+# 3 0 7 1
+# 5 0 7 2
+# 0 5 7 3
