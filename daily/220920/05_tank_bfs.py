@@ -18,6 +18,7 @@ def bfs(sty, stx, level, wall):
     directx = [0, 0, -1, 1]
     while q:
         now = q.popleft()
+        print(now)
         nowy, nowx, level, wall = now[0], now[1], now[2], now[3]
         if nowy == 3 and nowx == 5:
             print(level)
@@ -29,13 +30,17 @@ def bfs(sty, stx, level, wall):
             if arr[dy][dx] == 1:
                 wall += 1
             if wall < 3:
-                visited[dy][dx] = 1
+                visited[dy][dx] = level
                 q.append([dy, dx, level+1, wall])
+    for i in range(4):
+        for j in range(6):
+            print(visited[i][j], end=' ')
+        print()
 
 arr = [
     [0, 0, 1, 1, 1, 1],
-    [0, 0, 1, 0, 0, 1],
-    [0, 0, 1, 0, 1, 1],
+    [0, 1, 1, 1, 0, 1],
+    [0, 1, 1, 1, 1, 1],
     [0, 0, 1, 0, 1, 2]
 ]
 bfs(0, 0, 0, 0)

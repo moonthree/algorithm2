@@ -15,4 +15,5 @@ for i in range(1, len(arr)):
     for j in range(1, len(arr)):
         arr1[i][j] = min(arr1[i - 1][j], arr1[i][j - 1]) + arr[i][j]
 
+
 print(arr1[3][3])
