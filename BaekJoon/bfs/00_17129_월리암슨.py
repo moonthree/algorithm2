@@ -2,7 +2,6 @@
 # 3, 4, 5 = 음식
 import sys
 from collections import deque
-input = sys.stdin.readline
 
 q = deque()
 n, m = map(int, input().split())
